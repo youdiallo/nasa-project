@@ -13,8 +13,8 @@ const {
 describe("Test launches", () => {
 
     beforeAll(async () => {
-        await loadPlanetes();
         await mongooseConnect();
+        await loadPlanetes();
     });
 
     afterAll(async () => {
