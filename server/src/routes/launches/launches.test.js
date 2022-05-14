@@ -6,7 +6,13 @@ const {
     mongooseDisconnect,
 }  = require("../../services/mongo");
 
+const {
+    loadPlanetes,
+} = require("../../models/planetes.models");
+
 describe("Test launches", () => {
+
+    await loadPlanetes();
 
     beforeAll(async () => {
         await mongooseConnect();
