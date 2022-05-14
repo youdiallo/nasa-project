@@ -5,6 +5,8 @@ const planetes = require("./planetes.mongo");
 
 const SPACEX_API_URL = "https://api.spacexdata.com/v4/launches/query";
 
+const DEFAULT_FLIGHT_NUMBER = 100; 
+
 async function populateLaunches(){
     const response = await axios.post(SPACEX_API_URL, {
         query: {},
