@@ -12,9 +12,8 @@ const {
 
 describe("Test launches", () => {
 
-    await loadPlanetes();
-
     beforeAll(async () => {
+        await loadPlanetes();
         await mongooseConnect();
     });
 
